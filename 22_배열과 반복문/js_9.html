@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop & Array</title>
+</head>
+<body>
+    <!-- 데이터가 바뀌면 로직이 바뀌어야 하는 코드는 최악이지 -->
+    <!-- while(i < 4) 대신 while(i < coworkers.length) 라고 써주면 완벼크-->
+
+    <!-- 배열이라는 것은 순서대로 서로 연관된 데이터를 잘 정리 정돈하는 것이고,
+        반복문은 순서대로 배열에 담긴 데이터를 하나씩 꺼내서 자동화된 처리를 할 수 있는 문법이기 때문에
+        배열과 반복문은 잘 맞음 -->
+
+    <h1>Loop & Array</h1>
+
+    <script>
+        var coworkers = ['egoing', 'leezche', 'duru', 'taeho'];
+    </script>
+
+    <h2>Coworkers</h2>
+    <ul>
+        <script>
+            var i = 0;
+            while(i < coworkers.length){
+                document.write('<li><a href="http://a.com/'+coworkers[i]+'">'+coworkers[i]+'<a></li>');
+                i = i + 1;
+            }
+        </script>
+    </ul>
+</body>
+</html>
