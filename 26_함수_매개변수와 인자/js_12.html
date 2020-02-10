@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter</title>
+</head>
+<body>
+    <!-- 함수는 입력과 출력으로 이루어져 있는데 -->
+    <!-- 입력 - parameter / 매개변수, Argument / 인자 -->
+    <!-- 출력 - return -->
+
+    <h1>Function</h1>
+    <h2>Basic</h2>
+    <ul>
+        <script>
+            function two(){
+                document.write('<li>2-1</li>');
+                document.write('<li>2-2</li>');
+            }
+
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+        </script>
+    </ul>
+
+    <h2>Parameter & Argument</h2>
+    <script>
+        function onePlusOne(){
+            document.write(1+1+'<br>');
+        }
+
+        onePlusOne();
+
+        function sum(left, right){
+            //left와 right - Parameter
+            document.write(left+right+'<br>');
+        }
+        sum(2,3); //2와 3 - Argument
+        sum(3,4); //3과 4 - Argument
+    </script>
+    <h2>Return</h2>
+</body>
+</html>
