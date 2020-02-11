@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        // 처음엔 BodySetColor/BodySetBackgroundColor 라는 함수를 만들어 사용 > Body라는 객체 생성
+        // document도 객체 > querySelector는 document 객체의 함수
+        // 객체에 속해있는 함수 > METHOD !!
+
+        function linksSetColor(color){
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = color;
+                i=i+1;
+            }
+        }
+
+        function BodySetColor(color){
+            document.querySelector('body').style.color = color;
+        }
+
+        function BodySetBackgroundColor(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
+
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+            if(self.value === 'night'){
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                self.value = 'day';
+                Links.setColor('powderblue');
+            } else {
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                self.value = 'night';
+                Links.setColor('blue');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
+</body>
+</html>
