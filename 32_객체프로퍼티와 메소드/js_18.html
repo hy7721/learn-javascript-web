@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property & Method</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coworkers = {
+            "programmer" : "egoing",
+            "designer" : "leezche"
+        };
+
+        document.write("programmer : "+coworkers.programmer+"<br>");
+        document.write("designer : "+coworkers.designer+"<br>");
+        // . 뒤에 programmer > object access operator
+
+        // object에 데이터 추가
+        coworkers.bookkeeper = "duru";
+        coworkers["data scientist"] = "taeho"; // 띄어쓰기를 위해선 대괄호 사용
+
+        document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+        document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+
+    <!-- javascript object iterate -->
+    <h2>iterate</h2>
+    <script>
+        for (var key in coworkers){
+            document.write(key+' : '+coworkers[key]+'<br>');
+        }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+        // 객체 coworkers에 showAll이라는 method 추가하기
+        coworkers.showAll = function(){
+            for (var key in this){
+                document.write(key+' : '+this[key]+'<br>');
+            }
+        }
+
+        coworkers.showAll();
+    </script>
+</body>
+</html>
