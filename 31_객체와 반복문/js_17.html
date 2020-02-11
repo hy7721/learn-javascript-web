@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object & Iterate</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coworkers = {
+            "programmer" : "egoing",
+            "designer" : "leezche"
+        };
+
+        document.write("programmer : "+coworkers.programmer+"<br>");
+        document.write("designer : "+coworkers.designer+"<br>");
+        // . 뒤에 programmer > object access operator
+
+        // object에 데이터 추가
+        coworkers.bookkeeper = "duru";
+        coworkers["data scientist"] = "taeho"; // 띄어쓰기를 위해선 대괄호 사용
+
+        document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+        document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+
+    <!-- javascript object iterate -->
+    <h2>iterate</h2>
+    <script>
+        // 배열에서는 index / 객체에서는 key
+        // 객체 coworkers의 데이터 수만큼 아래 중괄호의 코드들이 실행됨 > 실행될 때마다 coworkers에 있는 key 값들 하나하나 변수값으로 세팅해줌
+
+
+        // 객체 coworkers에 있는 key 값들을 모조리 출력
+        // key - programmer, designer, bookkeeper, data scientist
+        for (var key in coworkers){
+            document.write(key+'<br>');
+        }
+
+        for (var key in coworkers){
+            document.write(coworkers[key]+'<br>');
+        }
+
+        for (var key in coworkers){
+            document.write(key+' : '+coworkers[key]+'<br>');
+        }
+    </script>
+</body>
+</html>
