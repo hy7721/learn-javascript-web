@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object 활용</title>
+    <script>
+        // Links에 프로퍼티 추가
+        var Links = {
+                setColor:function(color){
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length){
+                    console.log(alist[i]);
+                    alist[i].style.color = color;
+                    i=i+1;
+                }
+            }
+        }
+
+        // Body에 프로퍼티 추가
+        var Body = {
+            setColor:function(color){
+                document.querySelector('body').style.color = color;
+            },
+
+            // 객체의 프로퍼티와 프로퍼티를 구분할 때 쉼표!!!!
+
+            setBackgroundColor:function(color){
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+            if(self.value === 'night'){
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                self.value = 'day';
+                Links.setColor('powderblue');
+            } else {
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                self.value = 'night';
+                Links.setColor('blue');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
+</body>
+</html>
