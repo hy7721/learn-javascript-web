@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <!-- 배열 > 순서에 따라서 정보를 정리정돈한다는 특징 -->
+    <!-- 객체 > 순서없이 정보를 저장. 이름이 있는 정리정돈 상자 -->
+
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coworkers = {
+            "programmer" : "egoing",
+            "designer" : "leezche"
+        };
+
+        document.write("programmer : "+coworkers.programmer+"<br>");
+        document.write("designer : "+coworkers.designer+"<br>");
+        // . 뒤에 programmer > object access operator
+
+        // object에 데이터 추가
+        coworkers.bookkeeper = "duru";
+        coworkers["data scientist"] = "taeho"; // 띄어쓰기를 위해선 대괄호 사용
+
+        document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+        document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+</body>
+</html>
